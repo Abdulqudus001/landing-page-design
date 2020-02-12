@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-  width: 100vw;
+  /* width: 100vw; */
   color: var(--blue-01);
   font-family: 'Poppins', sans-serif;
 }
@@ -125,6 +125,52 @@ a:hover {
 .side-nav ul li {
   margin: 20px 0;
   text-align: center;
+}
+
+/* What we do */
+.client > .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.client-card {
+  background-color: #fff;
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  /* width: 320px; */
+  padding: 20px;
+  max-width: 100%;
+}
+
+.card-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-title {
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+
+.card-subtitle {
+  opacity: 0.6;
+  font-size: 1rem;
+}
+
+.card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
 }
 
 @media screen and (min-width: 720px) {
