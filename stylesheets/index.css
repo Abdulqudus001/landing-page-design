@@ -4,6 +4,11 @@ body {
   background-color: #fff;
   width: 100vw;
   color: var(--blue-01);
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  font-family: 'Libre Baskerville', serif;
 }
 
 a {
@@ -23,6 +28,7 @@ a:hover {
   width: 1300px;
   max-width: calc(100% - 60px);
   padding: 0 30px;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -44,7 +50,38 @@ a:hover {
 
 .hero {
   background: linear-gradient(0deg, rgba(152, 195, 232, 0.2) 8.84%, rgba(152, 195, 232, 0) 31.12%);
-  /* opacity: 0.2; */
+  padding: 30px 0;
+}
+
+.hero-body {
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sub-header {
+  opacity: 0.6;
+  max-width: 500px;
+}
+
+.cta {
+  border-radius: 10px;
+  background-color: var(--blue-04);
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  padding: 15px 40px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.hero img {
   width: 100%;
 }
 
@@ -97,5 +134,19 @@ a:hover {
   
   .hide-desktop {
     display: none;
+  }
+
+  .hero-body {
+    flex-direction: row;
+  }
+
+  .header {
+    font-size: 3rem;
+  }
+
+  .header,
+  .sub-header {
+    position: relative;
+    top: -70px;
   }
 }
