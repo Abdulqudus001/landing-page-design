@@ -128,22 +128,46 @@ a:hover {
 }
 
 /* What we do */
-.client > .container {
+
+.client {
+  text-align: center;
+  padding: 50px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.client > .container > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  grid-gap: 40px;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.client > .container > p {
+  color: var(--blue-02);
+  font-weight: bold;
+  font-size: 2rem;
+  width: 400px;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.client > .container > div > div:nth-child(2) > div {
+  margin: 0 auto 40px;
 }
 
 .client-card {
   background-color: #fff;
   box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
   border-radius: 10px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  /* width: 320px; */
+  margin: 0 auto;
   padding: 20px;
-  max-width: 100%;
+  max-width: 380px;
+  text-align: left;
 }
 
 .card-img {
@@ -170,7 +194,106 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 150px;
+  width: 120px;
+  color: var(--blue-04);
+}
+
+.projects {
+  margin: 20px auto;
+  max-width: 982px;
+}
+
+.project-header {
+  display: grid;
+  justify-content: space-between;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+}
+
+.project-header .main {
+  font-size: 2rem;
+  width: 100%;
+  font-weight: bold;
+}
+
+.project-header sub {
+  opacity: 0.6;
+  width: 100%;
+}
+
+.project-body {
+  position: relative;
+  background-size: cover;
+  /* height: fit-content; */
+  width: 982px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.overlay {
+  background: linear-gradient(89.97deg, #1F3F68 3.62%, rgba(31, 63, 104, 0.37) 97.78%);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 7px;
+  border-radius: 10px;
+}
+
+.overlay img {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.project-body > img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.project-body div:last-child {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 4;
+  color: #fff;
+  text-align: right;
+}
+
+.project-body p:first-child {
+  font-size: 1.2rem;
+}
+
+.project-body p:last-child {
+  font-size: 0.8rem;
+}
+
+.projects {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 50px;
+}
+
+.project {
+  position: relative;
+  /* max-width: 422px; */
+  border-radius: 10px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project div:last-child {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 4;
+  color: #fff;
+  text-align: left;
 }
 
 @media screen and (min-width: 720px) {
@@ -194,5 +317,64 @@ a:hover {
   .sub-header {
     position: relative;
     top: -70px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .client > .container > div {
+    gap: 70px;
+    grid-gap: 70px;
+  }
+  
+  .client > .container > div > div:nth-child(2) > div {
+    margin: 0 auto 70px;
+  }
+
+  .project-header .main {
+    width: 300px;
+  }
+
+  .project-header .sub {
+    max-width: 500px;
+  }
+
+  .project-body > img {
+    height: 450px;
+  }
+
+  .project-body p:first-child {
+    font-size: 1.5rem;
+  }
+  
+  .project-body p:last-child {
+    font-size: 0.8rem;
+  }
+
+  .project-body div:last-child {
+    right: 20px;
+  }
+
+  .project div:last-child {
+    left: 20px;
+  }
+
+  .overlay img {
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .client > .container > p {
+    position: absolute;
+    text-align: left;
+    left: 30px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .client > .container > p {
+    left: 90px;
   }
 }
