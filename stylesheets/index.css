@@ -340,6 +340,7 @@ a:hover {
   border-top-right-radius: 100px;
   width: 1650px;
   max-width: 100%;
+  margin: 40px 0;
 }
 
 @media screen and (min-width: 720px) {
