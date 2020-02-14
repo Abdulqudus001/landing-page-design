@@ -217,7 +217,7 @@ a:hover {
   font-weight: bold;
 }
 
-.project-header sub {
+.project-header .sub {
   opacity: 0.6;
   width: 100%;
 }
@@ -296,6 +296,52 @@ a:hover {
   text-align: left;
 }
 
+.client-section {
+  background-color: var(--blue-04);
+  width: 100%;
+  border-top-left-radius: 100px;
+}
+
+.client-section .main,
+.client-section .sub {
+  color: #fff;
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  text-align: center;
+}
+
+.clients > div {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #f2f2f2;
+}
+
+.client-section .project-header {
+  justify-items: end;
+}
+
+.clients > div:last-child {
+  background-color: rgba(31, 63, 104, 0.2);
+}
+
+.clients > div:not(:nth-child(even)){
+  border-right: 1px solid;
+}
+
+.clients > div:not(:nth-child(n+7)) {
+  border-bottom: 1px solid;
+}
+
+.footer {
+  background-color: var(--blue-02);
+  border-top-right-radius: 100px;
+  width: 1650px;
+  max-width: 100%;
+}
+
 @media screen and (min-width: 720px) {
   .show-desktop {
     display: block;
@@ -363,6 +409,14 @@ a:hover {
   .overlay img {
     width: fit-content;
   }
+
+  .client-section {
+    border-top-left-radius: 200px;
+  }
+
+  .footer {
+    border-top-right-radius: 200px;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -371,10 +425,41 @@ a:hover {
     text-align: left;
     left: 30px;
   }
+
+  div.clients {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    margin: 40px 0;
+  }
+
+  .clients > div {
+    padding: 30px;
+  }
+
+  .clients > div:not(:first-child):not(:nth-child(5)){
+    border-left: 1px solid;
+  }
+  
+  .clients > div:not(:nth-child(n+5)) {
+    border-bottom: 1px solid;
+  }
+
+  .clients > div:nth-child(n+5) {
+    border-bottom: none;
+  }
+
+  .client-section .project-header {
+    justify-items: center;
+  }
 }
 
 @media screen and (min-width: 1250px) {
   .client > .container > p {
     left: 90px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .client-section .project-header {
+    justify-items: start;
   }
 }
