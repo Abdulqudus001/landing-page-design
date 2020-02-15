@@ -271,7 +271,6 @@ a:hover {
 
 .projects {
   display: grid;
-  margin-top: 50px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 50px;
 }
@@ -342,7 +341,7 @@ a:hover {
   background-color: var(--blue-02);
   width: 100%;
   max-width: 100%;
-  margin: 40px 0;
+  margin: 40px 0 0;
   color: #fff;
 }
 
@@ -378,8 +377,56 @@ a:hover {
   left: 0;
   right: 0;
   background-color: #fff;
-  height: 5px;
+  height: 1.5px;
   border: none
+}
+
+.links {
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  width: 982px;
+  max-width: 100%;
+}
+
+.link {
+  max-width: 300px;
+  text-align: center;
+}
+
+.link-header {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  max-width: 100%;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.link-header p {
+  width: 100%;
+}
+
+.link-body {
+  padding: 0;
+  list-style-type: none;
+}
+
+.link-body li {
+  margin: 20px 0;
+}
+
+.links + p {
+  width: 982px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+  left: 10px;
+  opacity: 0.6;
 }
 
 @media screen and (min-width: 720px) {
@@ -489,6 +536,14 @@ a:hover {
 
   .client-section .project-header {
     justify-items: center;
+  }
+
+  .link {
+    text-align: left;
+  }
+  
+  .link-header {
+    margin: 0;
   }
 }
 
