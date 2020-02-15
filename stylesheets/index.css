@@ -17,7 +17,8 @@ a {
 }
 
 a:hover {
-  color: var(--blue-03);
+  /* color: var(--blue-03); */
+  opacity: 0.8;
 }
 
 .show-desktop {
@@ -419,7 +420,7 @@ a:hover {
   margin: 20px 0;
 }
 
-.links + p {
+.container + p {
   width: 982px;
   max-width: 100%;
   margin: 0 auto;
