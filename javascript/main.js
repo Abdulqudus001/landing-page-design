@@ -18,6 +18,12 @@ const hideNav = () => {
   closeNav.style.display = 'none'
 }
 
+window.addEventListener('resize', (e) => {
+  if (e.target.innerWidth < 720) {
+    hideNav()
+  }
+})
+
 cover.addEventListener('click', hideNav)
 
 closeNav.addEventListener('click', hideNav)
