@@ -1,0 +1,28 @@
+.contact-title {
+  max-width: 100vw;
+  background: url('../assets/images/blog-hero.png') no-repeat;
+  background-size: cover;
+  min-height: 200px;
+}
+
+.contact-title > .container > div {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-title p {
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+
+.contact-title p:first-child {
+  padding: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.contact-title p:last-child {
+  padding: 20px 0;
+  opacity: 0.6;
+}
