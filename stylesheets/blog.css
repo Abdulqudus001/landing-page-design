@@ -1,5 +1,8 @@
 .blog-container {
-  width: 1000px;
+  width: 940px;
+  max-width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 0 30px;
 }
 .blog-title {
   max-width: 100vw;
@@ -32,10 +35,139 @@
 
 .blog-posts input{
   width: 100%;
-  max-width: calc(100% - 70px);
+  max-width: calc(100% - 60px);
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   background: url('../assets/icons/search.svg') 30px 20px no-repeat;
-  background-color: rgb(230, 230, 230);
-  padding: 20px 0 20px 50px;
+  background-color: #f4f4f4;
+  padding: 20px 0 20px 60px;
+  margin: 0 auto;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.blog-img img {
+  width: 100%;
+}
+
+.popular,
+.top-post {
+  margin: 20px 0; 
+}
+
+.popular > p,
+.popular > a,
+.all-posts > p {
+  color: var(--blue-03);
+  opacity: 0.8;
+}
+
+.popular > a {
+  float: right;
+  margin: 20px 0;
+}
+
+.blog-container hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.top-post .details-title {
+  font-size: 2rem;
+}
+
+.details-title {
+  font-family: galien;
+  color: var(--blue-01);
+  max-width: 300px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* margin: 15px 0; */
+}
+
+.details-desc {
+  color: #000;
+  opacity: 0.6;
+  max-width: 300px;
+  font-size: 0.9rem;
+  /* margin: 15px 0; */
+}
+
+.actions {
+  display: flex;
+  width: 300px;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions div:last-child img {
+  margin: 0 10px;
+}
+
+.post-onwer p {
+  margin: 5px 0;
+}
+
+.name,
+.timestamp {
+  font-size: 0.9rem;
+  color: var(--blue-01);
+}
+
+.timestamp {
+  opacity: 0.4;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+.all-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.all {
+  max-width: 90%;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.all .blog-img {
+  width: 300px;
+}
+
+.all .details-title,
+.all .details-desc {
+  max-width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation span {
+  width: 100px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 720px) {
+  .all-posts {
+    align-items: flex-start;
+  }
 }
